@@ -1,0 +1,105 @@
+import { CreatedAt, Id, StringMap } from "..";
+import { countries } from "../../variables/countries";
+
+export type AvatarSrc = string;
+
+export type Bio = string;
+
+export type CLientId = string;
+
+export type FirstName = string;
+
+export type IsActive = boolean;
+
+export type LastName = string;
+
+export type NewUser = boolean;
+
+export type PhoneNumber = string;
+
+export type UserId = Id;
+
+export type Username = string;
+
+export type VerificationCode = string;
+
+export type Countries = typeof countries;
+export type CountryItem = (typeof countries)[number];
+export type CountryName = CountryItem["countryName"] | string;
+export type CountryCode = CountryItem["countryCode"] | string;
+export type CountryShortName = CountryItem["countryShortName"] | string;
+
+export interface Cellphone {
+  countryCode: CountryCode;
+  countryName: CountryName;
+  phoneNumber: PhoneNumber;
+}
+export interface EmptyCellphone {
+  countryCode: "";
+  countryName: "";
+  phoneNumber: "";
+}
+export type ExtendedCellphone = Cellphone & StringMap;
+
+export interface FullName {
+  firstName: FirstName;
+  lastName: LastName;
+}
+export interface EmptyFullName {
+  firstName: "";
+  lastName: "";
+}
+export type ExtendedFullName = FullName & StringMap;
+export type FullNameWithUserId = FullName & {
+  userId: UserId;
+};
+
+export interface ContactItem extends Cellphone, FullName {
+  userId: string;
+}
+export type ContactItemWithCellphone = Cellphone & FullName;
+export type ExtendedContactItem = ContactItem & StringMap;
+export type EmptyContact = EmptyCellphone & EmptyFullName & { userId: "" };
+export type Contacts = ContactItem[];
+
+export interface ClientItem {
+  clientId: CLientId;
+}
+export type Clients = ClientItem[];
+
+export interface Status {
+  isActive: IsActive;
+}
+
+export interface BlackListItem {
+  userId: UserId;
+}
+export type BlackList = BlackListItem[];
+
+export interface UserData extends Cellphone, FullName {
+  avatarSrc: AvatarSrc;
+  bio: Bio;
+  blacklist: BlackList;
+  clients: Clients;
+  contacts: Contacts;
+  createdAt: CreatedAt;
+  status: Status;
+  userId: UserId;
+  username: Username;
+}
+export type EmptyUserData = UserData &
+  EmptyCellphone & {
+    status: {
+      isActive: false;
+    };
+  };
+export type ExtendedUserData = UserData & StringMap;
+
+export interface UserPublicData {
+  bio: Bio;
+  firstName: FirstName;
+  lastName: LastName;
+  userId: UserId;
+  username: Username;
+}
+export type ExtendedUserPublicData = UserPublicData & StringMap;
