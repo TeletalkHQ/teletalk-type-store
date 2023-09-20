@@ -77,7 +77,10 @@ export interface UserData extends Cellphone, FullName {
   userId: UserId;
   username: Username;
 }
-export type EmptyUserData = UserData &
+export type EmptyUserData = Omit<
+  UserData,
+  "countryCode" | "countryName" | "phoneNumber"
+> &
   EmptyCellphone & {
     status: Status;
   };
