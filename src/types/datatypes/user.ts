@@ -2,32 +2,22 @@ import { CreatedAt, Id, StringMap } from "..";
 import { countries } from "../../variables/countries";
 
 export type AvatarSrc = string;
-
 export type Bio = string;
-
 export type CLientId = string;
-
 export type FirstName = string;
-
 export type IsActive = boolean;
-
 export type LastName = string;
-
 export type NewUser = boolean;
-
 export type PhoneNumber = string;
-
 export type UserId = Id;
-
 export type Username = string;
-
 export type VerificationCode = string;
 
 export type Countries = typeof countries;
 export type CountryItem = (typeof countries)[number];
-export type CountryName = CountryItem["countryName"] | string;
-export type CountryCode = CountryItem["countryCode"] | string;
-export type CountryShortName = CountryItem["countryShortName"] | string;
+export type CountryName = CountryItem["countryName"];
+export type CountryCode = CountryItem["countryCode"];
+export type CountryShortName = CountryItem["countryShortName"];
 
 export interface Cellphone {
   countryCode: CountryCode;
@@ -89,9 +79,7 @@ export interface UserData extends Cellphone, FullName {
 }
 export type EmptyUserData = UserData &
   EmptyCellphone & {
-    status: {
-      isActive: false;
-    };
+    status: Status;
   };
 export type ExtendedUserData = UserData & StringMap;
 

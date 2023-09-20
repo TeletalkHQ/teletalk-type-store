@@ -34,6 +34,5 @@
     "temp": true,
     ".prettierignore": true
   },
-  "explorerExclude.backup": {},
-  "marquee.widgets.npm-stats.packageNames": ["utility-store"]
+  "explorerExclude.backup": {}
 }

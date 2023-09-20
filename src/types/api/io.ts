@@ -70,7 +70,7 @@ export interface GetStuffIO<
   Errors = any,
   Events = any,
   Models = any,
-  ValidationModels = any
+  ValidationModels = any,
 > extends IO {
   input: object;
   output: {

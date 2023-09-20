@@ -5,7 +5,7 @@
   "description": "Type store for Teletalk projects",
   "main": "index.js",
   "files": [
-    "lib/types/*"
+    "lib/**/*"
   ],
   "types": "lib/types/index.d.ts",
   "scripts": {
