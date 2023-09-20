@@ -1,7 +1,7 @@
 {
   "name": "teletalk-types",
   "author": "S-STALWART-S",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Type store for Teletalk projects",
   "main": "index.js",
   "files": [
