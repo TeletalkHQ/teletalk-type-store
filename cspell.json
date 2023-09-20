@@ -3,7 +3,17 @@
 	"ignorePaths": [],
 	"dictionaryDefinitions": [],
 	"dictionaries": [],
-	"words": ["teletalk"],
-	"ignoreWords": [],
+	"words": [
+		"linebreak",
+		"Mostafa",
+		"teletalk",
+		"Vatanpoor"
+	],
+	"ignoreWords": [
+		"flowtype",
+		"rushstack",
+		"sonarjs",
+		"trivago"
+	],
 	"import": []
 }
