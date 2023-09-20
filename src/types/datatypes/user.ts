@@ -94,3 +94,12 @@ export interface UserPublicData {
   username: Username;
 }
 export type ExtendedUserPublicData = UserPublicData & StringMap;
+
+export interface ClientStatus {
+  connections: number;
+  userId: UserId;
+}
+
+export type ClientStatusList = {
+  [key: string]: ClientStatus;
+};
