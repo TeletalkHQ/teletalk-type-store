@@ -3,4 +3,4 @@ export interface StringMap {
 }
 
 export * from "./datatypes";
-export * from "./api/io";
+export * from "./api";
