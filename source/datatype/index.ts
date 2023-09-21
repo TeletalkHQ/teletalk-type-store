@@ -1,4 +1,4 @@
-export type * from "./common";
-export type * from "./other";
-export type * from "./privateChat";
-export type * from "./user";
+export * from "./common";
+export * from "./other";
+export * from "./privateChat";
+export * from "./user";

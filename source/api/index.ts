@@ -28,4 +28,4 @@ export type EventName =
   | "updatePublicData"
   | "verify";
 
-export type * from "./io";
+export * from "./io";
