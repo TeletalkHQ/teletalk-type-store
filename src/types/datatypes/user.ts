@@ -52,11 +52,9 @@ export type FullNameWithUserId = FullName & {
   userId: UserId;
 };
 
-export interface ContactItem extends PartialEmptyCellphone, FullName {
-  userId: UserId;
-}
+export type ContactItem = Cellphone & FullNameWithUserId;
+export type ContactItemWithoutCellphone = EmptyCellphone & FullNameWithUserId;
 
-export type ContactItemWithCellphone = Cellphone & FullName;
 export type ExtendedContactItem = ContactItem & StringMap;
 export type EmptyContact = EmptyCellphone & EmptyFullName & { userId: "" };
 export type Contacts = ContactItem[];
