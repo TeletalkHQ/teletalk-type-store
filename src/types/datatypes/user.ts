@@ -29,11 +29,14 @@ export interface EmptyCellphone {
   countryName: "";
   phoneNumber: "";
 }
-export type ExtendedCellphone = {
+
+export interface PartialEmptyCellphone {
   countryCode: CountryCode | "";
   countryName: CountryName | "";
   phoneNumber: PhoneNumber | "";
-} & StringMap;
+}
+
+export type ExtendedCellphone = PartialEmptyCellphone & StringMap;
 
 export interface FullName {
   firstName: FirstName;
@@ -48,10 +51,7 @@ export type FullNameWithUserId = FullName & {
   userId: UserId;
 };
 
-export interface ContactItem extends FullName {
-  countryCode: CountryCode | "";
-  countryName: CountryName | "";
-  phoneNumber: PhoneNumber | "";
+export interface ContactItem extends PartialEmptyCellphone, FullName {
   userId: UserId;
 }
 
