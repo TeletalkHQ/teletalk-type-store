@@ -3,7 +3,6 @@
   "author": "S-STALWART-S",
   "version": "1.0.47",
   "description": "Type store for Teletalk projects",
-  "main": "index.d.ts",
   "files": [
     "index.d.ts",
     "source"
