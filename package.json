@@ -1,13 +1,14 @@
 {
   "name": "teletalk-type-store",
   "author": "S-STALWART-S",
-  "version": "1.0.33",
+  "version": "1.0.61",
   "description": "Type store for Teletalk projects",
-  "main": "index.js",
+  "main": "index.d.ts",
   "files": [
-    "lib/**/*"
+    "index.d.ts",
+    "source"
   ],
-  "types": "lib/index.d.ts",
+  "types": "./index.d.ts",
   "scripts": {
     "build": "tsc",
     "check:format": "prettier --write ./",

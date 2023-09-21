@@ -2,5 +2,5 @@ export interface StringMap {
   [key: string]: any;
 }
 
-export * from "./datatypes";
+export * from "./datatype";
 export * from "./api";

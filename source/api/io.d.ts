@@ -1,13 +1,11 @@
-import { EventName } from ".";
-import {
+import type { EventName } from ".";
+import type {
   AvatarSrc,
   Bio,
   BlackListItem,
-  Cellphone,
   ChatId,
   ContactItem,
   ContactItemWithEmptyCellphone,
-  ContactItemWithoutUserId,
   Contacts,
   Countries,
   FullName,
@@ -25,7 +23,7 @@ import {
   Username,
   VerificationCode,
   WelcomeMessage,
-} from "../datatypes";
+} from "../datatype";
 
 export type IO = {
   input: object;
