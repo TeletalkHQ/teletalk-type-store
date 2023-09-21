@@ -1,5 +1,5 @@
 import { CreatedAt, Id, StringMap } from "..";
-import { countries } from "../../variables/countries";
+import { countries } from "../variables/countries";
 
 export type AvatarSrc = string;
 export type Bio = string;
