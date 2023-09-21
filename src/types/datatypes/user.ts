@@ -37,6 +37,12 @@ export interface PartialEmptyCellphone {
 }
 
 export type ExtendedCellphone = Cellphone & StringMap;
+export type UnknownCellphone = {
+  countryCode: string;
+  countryName: string;
+  phoneNumber: string;
+};
+export type ExtendedUnknownCellphone = UnknownCellphone & StringMap;
 export type ExtendedPartiallyEmptyCellphone = PartialEmptyCellphone & StringMap;
 
 export interface FullName {
