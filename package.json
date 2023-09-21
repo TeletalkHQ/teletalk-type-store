@@ -5,10 +5,10 @@
   "description": "Type store for Teletalk projects",
   "main": "index.js",
   "files": [
-    "index.d.ts",
+    "index.ts",
     "src"
   ],
-  "types": "./index.d.ts",
+  "types": "./index.ts",
   "scripts": {
     "build": "tsc",
     "check:format": "prettier --write ./",
