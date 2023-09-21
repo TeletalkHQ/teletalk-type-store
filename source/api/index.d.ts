@@ -28,4 +28,4 @@ export type EventName =
   | "updatePublicData"
   | "verify";
 
-export * from "./io.d.ts";
+export type * from "./io.d.ts";
