@@ -159,7 +159,7 @@ export interface AddContactIO extends IO {
 }
 
 export interface AddContactWithCellphoneIO extends IO {
-  input: ContactItemWithoutUserId;
+  input: UnknownCellphone & FullName;
   output: {
     newContact: ContactItem;
   };
