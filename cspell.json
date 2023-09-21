@@ -1,9 +1,9 @@
 {
-	"version": "0.2",
-	"ignorePaths": [],
-	"dictionaryDefinitions": [],
-	"dictionaries": [],
-	"words": ["teletalk"],
-	"ignoreWords": [],
-	"import": []
+  "version": "0.2",
+  "ignorePaths": [],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": ["linebreak", "Mostafa", "teletalk", "Vatanpoor"],
+  "ignoreWords": ["flowtype", "rushstack", "sonarjs", "trivago"],
+  "import": []
 }

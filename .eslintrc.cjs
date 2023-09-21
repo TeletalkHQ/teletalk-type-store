@@ -1,0 +1,66 @@
+module.exports = {
+  env: {
+    commonjs: true,
+    es2021: true,
+    node: true,
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:@cspell/recommended",
+    "plugin:json/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:sonarjs/recommended",
+    "prettier",
+  ],
+  overrides: [],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
+  plugins: ["@typescript-eslint", "@cspell", "sonarjs", "unused-imports"],
+  rules: {
+    "@cspell/spellchecker": [
+      "error",
+      {
+        autoFix: false,
+        checkComments: false,
+        ignoreImportProperties: false,
+      },
+    ],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "arrow-parens": "warn",
+    indent: ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "no-console": "warn",
+    "no-delete-var": "warn",
+    "no-unused-vars": "off",
+    "no-use-before-define": [
+      "error",
+      {
+        allowNamedExports: false,
+        classes: true,
+        functions: false,
+        variables: false,
+      },
+    ],
+    "no-var": "warn",
+    "object-shorthand": ["error", "always"],
+    quotes: ["warn", "double"],
+    semi: ["error", "always"],
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        args: "after-used",
+        argsIgnorePattern: "^_",
+        ignoreRestSiblings: true,
+        vars: "all",
+        varsIgnorePattern: "^_",
+      },
+    ],
+  },
+};
