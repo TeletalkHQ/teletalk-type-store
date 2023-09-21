@@ -7,7 +7,7 @@
   "files": [
     "lib/**/*"
   ],
-  "types": "lib/types/index.d.ts",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "check:format": "prettier --write ./",
