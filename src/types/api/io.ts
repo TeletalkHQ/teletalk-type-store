@@ -18,6 +18,7 @@ import {
   ParticipantId,
   PrivateChatItem,
   PrivateChats,
+  UnknownCellphone,
   UserData,
   UserId,
   UserPublicData,
@@ -47,7 +48,7 @@ export interface LogoutIO extends IO {
 }
 
 export interface SignInIO extends IO {
-  input: Cellphone;
+  input: UnknownCellphone;
   output: object;
 }
 
