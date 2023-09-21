@@ -3,12 +3,12 @@
   "author": "S-STALWART-S",
   "version": "1.0.55",
   "description": "Type store for Teletalk projects",
-  "main": "index.d.ts",
+  "main": "index.ts",
   "files": [
-    "index.d.ts",
+    "index.ts",
     "source"
   ],
-  "types": "./index.d.ts",
+  "types": "./index.ts",
   "scripts": {
     "build": "tsc",
     "check:format": "prettier --write ./",
