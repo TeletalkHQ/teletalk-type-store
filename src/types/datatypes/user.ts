@@ -3,7 +3,7 @@ import { countries } from "../../variables/countries";
 
 export type AvatarSrc = string;
 export type Bio = string;
-export type CLientId = string;
+export type ClientId = string;
 export type FirstName = string;
 export type IsActive = boolean;
 export type LastName = string;
@@ -62,7 +62,7 @@ export type EmptyContact = EmptyCellphone & EmptyFullName & { userId: "" };
 export type Contacts = ContactItem[];
 
 export interface ClientItem {
-  clientId: CLientId;
+  ClientId: ClientId;
 }
 export type Clients = ClientItem[];
 
