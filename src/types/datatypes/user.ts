@@ -29,7 +29,11 @@ export interface EmptyCellphone {
   countryName: "";
   phoneNumber: "";
 }
-export type ExtendedCellphone = (Cellphone | EmptyCellphone) & StringMap;
+export type ExtendedCellphone = {
+  countryCode: CountryCode | "";
+  countryName: CountryName | "";
+  phoneNumber: PhoneNumber | "";
+} & StringMap;
 
 export interface FullName {
   firstName: FirstName;
