@@ -44,9 +44,13 @@ export type FullNameWithUserId = FullName & {
   userId: UserId;
 };
 
-export interface ContactItem extends Cellphone, FullName {
+export interface ContactItem extends FullName {
+  countryCode: CountryCode | "";
+  countryName: CountryName | "";
+  phoneNumber: string | "";
   userId: string;
 }
+
 export type ContactItemWithCellphone = Cellphone & FullName;
 export type ExtendedContactItem = ContactItem & StringMap;
 export type EmptyContact = EmptyCellphone & EmptyFullName & { userId: "" };
