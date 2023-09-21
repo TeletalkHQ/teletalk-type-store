@@ -1,5 +1,5 @@
-import { EventName } from ".";
-import {
+import type { EventName } from ".";
+import type {
   AvatarSrc,
   Bio,
   BlackListItem,
