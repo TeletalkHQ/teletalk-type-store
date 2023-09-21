@@ -54,7 +54,7 @@ export type FullNameWithUserId = FullName & {
 
 export type ContactItem = Cellphone & FullNameWithUserId;
 export type ContactItemWithEmptyCellphone = EmptyCellphone & FullNameWithUserId;
-
+export type ContactItemWithoutUserId = Cellphone & FullName;
 export type ExtendedContactItem = ContactItem & StringMap;
 export type EmptyContact = EmptyCellphone & EmptyFullName & { userId: "" };
 export type Contacts = ContactItem[];
