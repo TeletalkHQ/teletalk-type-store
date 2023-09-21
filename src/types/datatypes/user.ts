@@ -36,7 +36,8 @@ export interface PartialEmptyCellphone {
   phoneNumber: PhoneNumber | "";
 }
 
-export type ExtendedCellphone = PartialEmptyCellphone & StringMap;
+export type ExtendedCellphone = Cellphone & StringMap;
+export type ExtendedPartiallyEmptyCellphone = PartialEmptyCellphone & StringMap;
 
 export interface FullName {
   firstName: FirstName;
