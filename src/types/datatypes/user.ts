@@ -60,7 +60,7 @@ export type EmptyContact = EmptyCellphone & EmptyFullName & { userId: "" };
 export type Contacts = ContactItem[];
 
 export interface ClientItem {
-  ClientId: ClientId;
+  clientId: ClientId;
 }
 export type Clients = ClientItem[];
 
