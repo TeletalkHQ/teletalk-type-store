@@ -53,7 +53,7 @@ export type FullNameWithUserId = FullName & {
 };
 
 export type ContactItem = Cellphone & FullNameWithUserId;
-export type ContactItemWithoutCellphone = EmptyCellphone & FullNameWithUserId;
+export type ContactItemWithEmptyCellphone = EmptyCellphone & FullNameWithUserId;
 
 export type ExtendedContactItem = ContactItem & StringMap;
 export type EmptyContact = EmptyCellphone & EmptyFullName & { userId: "" };
