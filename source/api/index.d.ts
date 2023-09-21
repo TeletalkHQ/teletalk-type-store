@@ -27,5 +27,3 @@ export type EventName =
   | "updateContact"
   | "updatePublicData"
   | "verify";
-
-export * from "./io";
