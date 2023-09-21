@@ -7,6 +7,7 @@ import {
   ChatId,
   ContactItem,
   ContactItemWithEmptyCellphone,
+  ContactItemWithoutUserId,
   Contacts,
   Countries,
   FullName,
@@ -157,7 +158,7 @@ export interface AddContactIO extends IO {
 }
 
 export interface AddContactWithCellphoneIO extends IO {
-  input: ContactItemWithEmptyCellphone;
+  input: ContactItemWithoutUserId;
   output: {
     newContact: ContactItem;
   };
