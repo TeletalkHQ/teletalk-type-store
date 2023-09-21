@@ -47,8 +47,8 @@ export type FullNameWithUserId = FullName & {
 export interface ContactItem extends FullName {
   countryCode: CountryCode | "";
   countryName: CountryName | "";
-  phoneNumber: string | "";
-  userId: string;
+  phoneNumber: PhoneNumber | "";
+  userId: UserId;
 }
 
 export type ContactItemWithCellphone = Cellphone & FullName;
@@ -70,7 +70,7 @@ export interface BlackListItem {
 }
 export type BlackList = BlackListItem[];
 
-export interface UserData extends Cellphone, FullName {
+export interface UserData extends ContactItem {
   avatarSrc: AvatarSrc;
   bio: Bio;
   blacklist: BlackList;
@@ -78,7 +78,6 @@ export interface UserData extends Cellphone, FullName {
   contacts: Contacts;
   createdAt: CreatedAt;
   status: Status;
-  userId: UserId;
   username: Username;
 }
 export type EmptyUserData = Omit<
