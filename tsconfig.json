@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "declaration": true,
-    "declarationMap": true,
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
@@ -19,5 +17,5 @@
     "target": "ES5"
   },
   "exclude": ["node_modules", "**/__tests__/*"],
-  "include": ["source/**/*", "index.d.ts"]
+  "include": ["source/**/*", "index.ts"]
 }

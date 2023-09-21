@@ -1,4 +1,4 @@
-import type { CreatedAt, Id, StringMap } from "../..";
+import type { CreatedAt, Id, StringMap } from "..";
 import type { countries } from "../variables/countries";
 
 export type AvatarSrc = string;

@@ -23,7 +23,7 @@ import type {
   Username,
   VerificationCode,
   WelcomeMessage,
-} from "../datatypes";
+} from "../datatype";
 
 export type IO = {
   input: object;
