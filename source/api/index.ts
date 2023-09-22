@@ -26,6 +26,7 @@ export type EventName =
   | "updateAvatar"
   | "updateContact"
   | "updatePublicData"
+  | "getAvatar"
   | "verify";
 
 export * from "./io";

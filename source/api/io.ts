@@ -251,6 +251,16 @@ export interface UpdatePublicDataIO extends IO {
   };
 }
 
+export interface GetAvatarIO extends IO {
+  input: {
+    userId: UserId;
+  };
+  output: {
+    avatarSrc: AvatarSrc;
+    userId: UserId;
+  };
+}
+
 export interface UpdateAvatarIO extends IO {
   input: {
     avatarSrc: AvatarSrc;
@@ -291,4 +301,5 @@ export type IOCollection = { [key in EventName]: IO } & {
   updateContact: UpdateContactIO;
   updatePublicData: UpdatePublicDataIO;
   verify: VerifyIO;
+  getAvatar: GetAvatarIO;
 };
