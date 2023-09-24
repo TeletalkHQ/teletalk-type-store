@@ -3,7 +3,7 @@ import type { countries } from "../variables/countries";
 
 export type AvatarSrc = string;
 export type Bio = string;
-export type ClientId = string;
+export type SessionId = string;
 export type FirstName = string;
 export type IsActive = boolean;
 export type LastName = string;
@@ -65,10 +65,12 @@ export type ExtendedContactItem = ContactItem & StringMap;
 export type EmptyContact = EmptyCellphone & EmptyFullName & { userId: "" };
 export type Contacts = ContactItem[];
 
-export interface ClientItem {
-  clientId: ClientId;
+export type EncryptedSession = string;
+
+export interface SessionItem {
+  sessionId: SessionId;
 }
-export type Clients = ClientItem[];
+export type Sessions = SessionItem[];
 
 export interface Status {
   isActive: IsActive;
@@ -83,7 +85,7 @@ export interface UserData extends ContactItem {
   avatarSrc: AvatarSrc;
   bio: Bio;
   blacklist: BlackList;
-  clients: Clients;
+  sessions: Sessions;
   contacts: Contacts;
   createdAt: CreatedAt;
   status: Status;

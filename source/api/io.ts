@@ -8,6 +8,7 @@ import type {
   ContactItemWithEmptyCellphone,
   Contacts,
   Countries,
+  EncryptedSession,
   FullName,
   FullNameWithUserId,
   MessageItem,
@@ -32,7 +33,9 @@ export type IO = {
 
 export interface CreateNewUserIO extends IO {
   input: FullName;
-  output: object;
+  output: {
+    session: EncryptedSession;
+  };
 }
 
 export interface DisconnectIO extends IO {
@@ -56,6 +59,7 @@ export interface VerifyIO extends IO {
   };
   output: {
     newUser: NewUser;
+    session: EncryptedSession;
   };
 }
 
