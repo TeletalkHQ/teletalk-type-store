@@ -1,30 +1,6 @@
 import type { EventName } from ".";
-import type {
-  AvatarSrc,
-  Bio,
-  BlackListItem,
-  ChatId,
-  ContactItem,
-  ContactItemWithEmptyCellphone,
-  Contacts,
-  Countries,
-  EncryptedSession,
-  FullName,
-  FullNameWithUserId,
-  MessageItem,
-  MessageText,
-  NewUser,
-  ParticipantId,
-  PrivateChatItem,
-  PrivateChats,
-  UnknownCellphone,
-  UserData,
-  UserId,
-  UserPublicData,
-  Username,
-  VerificationCode,
-  WelcomeMessage,
-} from "../datatype";
+import type { AvatarSrc, Bio, BlackListItem, ChatId, ContactItem, ContactItemWithEmptyCellphone, Contacts, Countries, EncryptedSession, FullName, FullNameWithUserId, MessageItem, MessageText, NewUser, ParticipantId, PrivateChatItem, PrivateChats, UnknownCellphone, UserData, UserId, UserPublicData, Username, VerificationCode, WelcomeMessage } from "../datatype";
+
 
 export type IO = {
   input: object;
@@ -50,7 +26,9 @@ export interface LogoutIO extends IO {
 
 export interface SignInIO extends IO {
   input: UnknownCellphone;
-  output: object;
+  output: {
+    session: EncryptedSession;
+  };
 }
 
 export interface VerifyIO extends IO {
