@@ -64,6 +64,10 @@ export type ContactItemWithoutUserId = Cellphone & FullName;
 export type ExtendedContactItem = ContactItem & StringMap;
 export type EmptyContact = EmptyCellphone & EmptyFullName & { userId: "" };
 export type Contacts = ContactItem[];
+export type DBContactItem = FullNameWithUserId & {
+  isCellphoneAccessible: boolean;
+};
+export type DBContacts = DBContactItem[];
 
 export type EncryptedSession = string;
 
@@ -91,9 +95,8 @@ export interface UserData extends ContactItem {
   status: Status;
   username: Username;
 }
-
+export type DBUserData = Omit<UserData, "contacts"> & { contacts: DBContacts };
 export type UserDataWithoutSessions = Omit<UserData, "sessions">;
-
 export type EmptyUserData = Omit<
   UserData,
   "countryCode" | "countryName" | "phoneNumber"
@@ -101,11 +104,8 @@ export type EmptyUserData = Omit<
   EmptyCellphone & {
     status: Status;
   };
-
 export type EmptyUserDataWithoutSessions = Omit<EmptyUserData, "sessions">;
-
 export type ExtendedUserData = UserData & StringMap;
-
 export type ExtendedUserDataWithoutSessions = UserDataWithoutSessions &
   StringMap;
 
