@@ -1,6 +1,30 @@
 import type { EventName } from ".";
-import type { AvatarSrc, Bio, BlackListItem, ChatId, ContactItem, ContactItemWithEmptyCellphone, Contacts, Countries, EncryptedSession, FullName, FullNameWithUserId, MessageItem, MessageText, NewUser, ParticipantId, PrivateChatItem, PrivateChats, UnknownCellphone, UserData, UserId, UserPublicData, Username, VerificationCode, WelcomeMessage } from "../datatype";
-
+import type {
+  AvatarSrc,
+  Bio,
+  BlackListItem,
+  ChatId,
+  ContactItem,
+  ContactItemWithEmptyCellphone,
+  Contacts,
+  Countries,
+  EncryptedSession,
+  FullName,
+  FullNameWithUserId,
+  MessageItem,
+  MessageText,
+  NewUser,
+  ParticipantId,
+  PrivateChatItem,
+  PrivateChats,
+  UnknownCellphone,
+  UserDataWithoutSessions,
+  UserId,
+  UserPublicData,
+  Username,
+  VerificationCode,
+  WelcomeMessage,
+} from "../datatype";
 
 export type IO = {
   input: object;
@@ -178,7 +202,7 @@ export interface GetOnlineClientsIO extends IO {
 export interface GetUserDataIO extends IO {
   input: object;
   output: {
-    user: UserData;
+    user: UserDataWithoutSessions;
   };
 }
 

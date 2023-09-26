@@ -91,6 +91,9 @@ export interface UserData extends ContactItem {
   status: Status;
   username: Username;
 }
+
+export type UserDataWithoutSessions = Omit<UserData, "sessions">;
+
 export type EmptyUserData = Omit<
   UserData,
   "countryCode" | "countryName" | "phoneNumber"
@@ -98,7 +101,13 @@ export type EmptyUserData = Omit<
   EmptyCellphone & {
     status: Status;
   };
+
+export type EmptyUserDataWithoutSessions = Omit<EmptyUserData, "sessions">;
+
 export type ExtendedUserData = UserData & StringMap;
+
+export type ExtendedUserDataWithoutSessions = UserDataWithoutSessions &
+  StringMap;
 
 export interface UserPublicData {
   bio: Bio;
